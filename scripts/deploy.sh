@@ -2,7 +2,7 @@
 
 HELM_REPO=$bamboo_HELM_REPO
 HELM_USR=$bamboo_HELM_USR
-HELM_PSW=$bamboo_HELM_PSQ
+HELM_PSW=$bamboo_HELM_PSW
 
 
 #create env if not present
@@ -19,7 +19,7 @@ HELM_PSW=$bamboo_HELM_PSQ
 #helm fetch http://23.101.135.43/artifactory/helm-local/devops-0.45.0.tgz
 
 #helm install
-/bin/helm install --namespace test --name dotnetcorebmb-latest-test --set image.repository=sugendh/dotnetcorebmb,image.tag=latest helm/devops
+#/bin/helm install --namespace test --name dotnetcorebmb-latest-test --set image.repository=sugendh/dotnetcorebmb,image.tag=latest helm/devops
 
 #helm upgrade
 #/usr/local/bin/helm upgrade --install --namespace test dotnetcorebmb-latest-test --set image.repository=sugendh/dotnetcorebmb,image.tag=latest helm/devops
