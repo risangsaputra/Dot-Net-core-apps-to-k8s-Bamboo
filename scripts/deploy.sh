@@ -1,6 +1,8 @@
 #!/bin/bash
 
 HELM_REPO=$bamboo_HELM_REPO
+HELM_USR=$bamboo_HELM_USR
+HELM_PSW=$bamboo_HELM_PSQ
 
 
 #create env if not present
@@ -10,7 +12,8 @@ HELM_REPO=$bamboo_HELM_REPO
 #kubectl expose deployment hello-dotnet --type=LoadBalancer --port=8080 -n test
 
 #rm -rf helm
-/bin/helm repo add helm $HELM_REPO
+#/bin/helm repo add kjt-harbor  $HELM_REPO
+/bin/helm repo add kjt-harbor --username=$HELM_USR --password=$HELM_PSW $HELM_REPO
 /bin/helm repo update
 
 #helm fetch http://23.101.135.43/artifactory/helm-local/devops-0.45.0.tgz
